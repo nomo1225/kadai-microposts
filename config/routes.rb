@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   # resourcesで必要なアクション指定
   resources :users, only: [:index, :show, :new, :create]
+  
+  resources :microposts, only: [:create, :destroy]
 end
